@@ -1,513 +1,629 @@
 
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#071a33">
-<meta name="description" content="A TO Z Auto Mechanics. Vehicle repairs, diagnostics, servicing, car sales and rental enquiries in Windsor and Maidenhead.">
-<title>A TO Z Auto Mechanics | Vehicle Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#031426">
+  <meta name="description" content="A to Z Auto Mechanics Limited offers mobile mechanic services, used car sales and car rentals in Windsor, Maidenhead and surrounding areas.">
+  <title>A to Z Auto Mechanics Limited | From A to Z, We've Got Your Car Covered</title>
 
-<style>
-:root {
-  --navy: #071a33;
-  --blue: #1769ed;
-  --light: #f2f6fc;
-  --text: #172941;
-  --muted: #64748b;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  line-height: 1.6;
-}
-.wrap { width: 90%; max-width: 1100px; margin: auto; }
-a { text-decoration: none; }
-.top {
-  background: #041226;
-  color: white;
-  padding: 9px 0;
-  font-size: 13px;
-}
-.top .wrap {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.top a { color: white; }
-header {
-  background: white;
-  box-shadow: 0 3px 18px #071a3315;
-}
-nav {
-  min-height: 78px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-.logo {
-  color: var(--navy);
-  font-size: 19px;
-  font-weight: 900;
-}
-.logo span { color: var(--blue); }
-.logo small {
-  display: block;
-  font-size: 9px;
-  letter-spacing: 1px;
-  color: var(--muted);
-}
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.links a {
-  color: var(--navy);
-  font-size: 13px;
-  font-weight: bold;
-}
-.links a:hover { color: var(--blue); }
+  <style>
+    :root {
+      --navy: #031426;
+      --navy2: #082541;
+      --blue: #079af2;
+      --blue2: #0879dc;
+      --green: #13c85a;
+      --white: #fff;
+      --ink: #0a1b35;
+      --muted: #536174;
+      --light: #f5f8fc;
+    }
 
-.btn {
-  display: inline-block;
-  background: var(--blue);
-  color: white;
-  border: 0;
-  padding: 13px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.btn:hover { background: #0b50bd; }
-.btn-light { background: white; color: var(--navy); }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.6;
+      background: var(--white);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    .container { width: min(1180px, 92%); margin: auto; }
 
-.hero {
-  color: white;
-  background:
-    linear-gradient(90deg, rgba(4,18,38,.96) 0%, rgba(4,18,38,.85) 50%, rgba(4,18,38,.25) 100%),
-    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat;
-  min-height: 490px;
-  display: flex;
-  align-items: center;
-  padding: 75px 0;
-}
-.eyebrow {
-  color: #8bbcff;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-h1 {
-  font-size: clamp(38px, 6vw, 66px);
-  line-height: 1.1;
-  margin: 18px 0;
-  max-width: 800px;
-}
-h1 span { color: #80b5ff; }
-.hero p {
-  max-width: 630px;
-  font-size: 18px;
-  color: #e0e9f7;
-}
-.actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 25px;
-}
-.note { color: #d2deed; font-size: 12px; margin-top: 20px; }
+    /* HEADER */
+    .top-header {
+      background: var(--navy);
+      color: white;
+      border-bottom: 1px solid #24415e;
+    }
+    .header-inner {
+      min-height: 112px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+      min-width: 225px;
+    }
+    .brand-car {
+      font-size: 12px;
+      color: var(--blue);
+      letter-spacing: 5px;
+      margin-left: 24px;
+      font-weight: bold;
+    }
+    .brand-name {
+      font-size: clamp(28px, 3vw, 39px);
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      white-space: nowrap;
+    }
+    .brand-name span { color: var(--blue); }
+    .brand-sub {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-top: 5px;
+    }
+    .brand-limited {
+      color: var(--blue);
+      font-size: 13px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      margin: 5px 0 0 47px;
+    }
+    .header-details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      font-size: 12px;
+    }
+    .detail { display: flex; align-items: center; gap: 9px; }
+    .detail-icon { font-size: 25px; color: var(--blue); }
+    .detail strong { display: block; font-size: 14px; }
+    .tagline {
+      max-width: 190px;
+      color: white;
+      text-align: center;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.25;
+      transform: rotate(-4deg);
+    }
+    .tagline small { display: block; font-size: 13px; }
 
-.quick {
-  padding: 22px 0;
-  border-bottom: 1px solid #e1e8f1;
-}
-.quick-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-.quick strong, .quick span { display: block; }
-.quick strong { font-size: 14px; }
-.quick span { font-size: 12px; color: var(--muted); }
+    nav { background: #04182b; color: white; }
+    .nav-inner {
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
+      min-height: 48px;
+    }
+    .nav-inner a {
+      padding: 14px 19px;
+      font-size: 13px;
+      white-space: nowrap;
+      transition: background .2s;
+    }
+    .nav-inner a:hover, .nav-inner a.active {
+      background: var(--blue);
+    }
 
-section.content { padding: 70px 0; }
-h2 {
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.2;
-  margin: 12px 0;
-}
-.intro { color: var(--muted); max-width: 700px; }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 30px;
-}
-.card {
-  border: 1px solid #e0e8f2;
-  border-radius: 13px;
-  padding: 24px;
-  background: white;
-}
-.card:hover {
-  box-shadow: 0 8px 28px #071a3310;
-}
-.symbol {
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background: #eaf2ff;
-  font-size: 27px;
-}
-.card h3 { margin-bottom: 5px; }
-.card p { color: var(--muted); font-size: 14px; }
-.card a { color: var(--blue); font-size: 13px; font-weight: bold; }
+    /* HERO */
+    .hero {
+      min-height: 405px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(1,13,27,.97) 0%,
+        rgba(1,13,27,.88) 37%, rgba(1,13,27,.24) 76%),
+        url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=2000&q=85")
+        center 48% / cover no-repeat;
+    }
+    .hero-content { padding-top: 42px; padding-bottom: 42px; max-width: 670px; }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .eyebrow span { color: var(--blue); padding: 0 7px; }
+    h1 {
+      text-transform: uppercase;
+      font-size: clamp(34px, 5vw, 53px);
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+      font-weight: 900;
+      margin-bottom: 17px;
+    }
+    h1 span { color: var(--blue); display: block; }
+    .hero p { max-width: 500px; font-size: 15px; margin-bottom: 24px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 20px;
+      border-radius: 28px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: transform .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-blue { background: var(--blue); color: white; }
+    .btn-blue:hover { background: var(--blue2); }
+    .btn-green { background: var(--green); color: white; }
+    .btn-green:hover { background: #0da94a; }
+    .btn-dark { background: var(--navy); color: white; }
+    .btn-dark:hover { background: var(--blue2); }
 
-.band {
-  background: var(--navy);
-  color: white;
-  padding: 48px 0;
-}
-.band .wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-}
-.band p { color: #d0dced; max-width: 650px; }
-.pale { background: var(--light); }
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  align-items: center;
-}
-.panel {
-  background: white;
-  border: 1px solid #e0e8f2;
-  border-radius: 13px;
-  padding: 25px;
-}
-.panel li { padding: 5px 0; }
-.muted { color: var(--muted); }
-.phone { font-size: 27px; font-weight: bold; color: var(--blue); }
+    /* SECTION HEADINGS */
+    .section { padding: 42px 0; }
+    .section-heading { text-align: center; margin-bottom: 28px; }
+    .section-heading h2 {
+      font-size: 29px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    .underline {
+      height: 4px;
+      width: 65px;
+      background: var(--blue);
+      margin: 10px auto 0;
+    }
+    .section-intro {
+      color: var(--muted);
+      margin: 10px auto 0;
+      max-width: 650px;
+      font-size: 14px;
+    }
 
-form {
-  background: white;
-  border: 1px solid #e0e8f2;
-  border-radius: 13px;
-  padding: 24px;
-}
-label {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 14px;
-}
-input, select, textarea {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border: 1px solid #cbd7e6;
-  border-radius: 7px;
-  font: inherit;
-  background: white;
-}
-textarea { min-height: 110px; }
-.consent {
-  display: flex;
-  gap: 9px;
-  align-items: flex-start;
-  font-weight: normal;
-  color: var(--muted);
-}
-.consent input { width: auto; margin-top: 5px; }
-.status { font-size: 13px; color: var(--muted); }
+    /* SERVICE CARDS */
+    .services { background: #fff; }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .service-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 4px 15px rgba(4,24,43,.05);
+      display: flex;
+      flex-direction: column;
+    }
+    .service-image { height: 175px; position: relative; }
+    .service-image img { height: 100%; }
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      left: 14px;
+      bottom: -22px;
+      border: 4px solid white;
+      border-radius: 50%;
+      background: var(--blue2);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+    }
+    .service-content {
+      padding: 32px 18px 19px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .service-content h3 {
+      text-transform: uppercase;
+      font-size: 17px;
+      margin-bottom: 5px;
+      font-weight: 900;
+    }
+    .service-content p { font-size: 13px; color: #354258; margin-bottom: 12px; }
+    .service-content ul { list-style: none; margin-bottom: 18px; flex: 1; }
+    .service-content li { font-size: 12px; margin: 5px 0; }
+    .service-content li::before {
+      content: "✓";
+      color: var(--blue2);
+      font-weight: bold;
+      margin-right: 9px;
+      font-size: 15px;
+    }
+    .service-content .btn { align-self: flex-start; padding: 9px 17px; font-size: 12px; }
 
-footer {
-  background: #041226;
-  color: white;
-  padding: 38px 0 20px;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 25px;
-}
-footer p, footer small { color: #bdcce0; }
-footer a {
-  display: block;
-  color: white;
-  font-size: 13px;
-  margin: 7px 0;
-}
-.legal {
-  border-top: 1px solid #263b56;
-  padding-top: 15px;
-  margin-top: 25px;
-  font-size: 11px;
-  color: #aabbd0;
-}
+    /* WHY CHOOSE US */
+    .why {
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(2,19,37,.97), rgba(2,19,37,.77)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80")
+        center / cover no-repeat;
+      padding: 35px 0;
+    }
+    .why h2 { font-size: 28px; text-transform: uppercase; }
+    .why .underline { margin: 9px 0 23px; }
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      max-width: 760px;
+    }
+    .benefit {
+      text-align: center;
+      padding: 5px 9px;
+      border-right: 1px solid rgba(255,255,255,.15);
+    }
+    .benefit:last-child { border-right: 0; }
+    .benefit .icon { font-size: 34px; color: var(--blue); display: block; margin-bottom: 6px; }
+    .benefit p { font-size: 12px; font-weight: bold; line-height: 1.35; }
 
-@media(max-width:760px) {
-  nav { align-items: flex-start; flex-direction: column; }
-  .links { gap: 12px; }
-  .quick-grid { grid-template-columns: 1fr 1fr; }
-  .cards { grid-template-columns: 1fr 1fr; }
-  .split { grid-template-columns: 1fr; }
-  .band .wrap { align-items: flex-start; flex-direction: column; }
-}
-@media(max-width:480px) {
-  .hero { min-height: 440px; padding: 55px 0; }
-  .hero p { font-size: 16px; }
-  .actions .btn { width: 100%; text-align: center; }
-  .cards { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-}
-</style>
+    /* COVERAGE */
+    .coverage-layout {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 25px;
+      align-items: center;
+    }
+    .coverage-title { display: flex; align-items: center; gap: 15px; margin-bottom: 8px; }
+    .coverage-pin { font-size: 38px; color: var(--blue); }
+    .coverage-title h2 { font-size: 22px; text-transform: uppercase; }
+    .coverage-copy { font-size: 13px; color: #354258; }
+    .towns { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 17px; }
+    .towns span { font-size: 11px; }
+    .towns span::before { content: "✓"; color: var(--blue2); font-weight: bold; margin-right: 6px; }
+    .coverage-art {
+      min-height: 135px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #e9f3ff, #d5e7fb);
+      display: grid;
+      place-items: center;
+      color: var(--blue2);
+      text-align: center;
+      padding: 14px;
+    }
+    .coverage-art .big-pin { font-size: 45px; }
+    .coverage-art strong { display: block; font-size: 12px; }
+
+    /* CALL TO ACTION */
+    .cta { background: linear-gradient(100deg, #0879dc, #0055ac); color: white; padding: 22px 0; }
+    .cta-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .cta-copy { display: flex; align-items: center; gap: 15px; }
+    .cta-car { font-size: 43px; }
+    .cta-copy h2 { font-size: 21px; line-height: 1.25; }
+    .cta-copy p { font-size: 12px; }
+    .cta-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .cta-actions .btn { background: white; color: var(--navy); }
+
+    /* FOOTER */
+    footer { background: #021326; color: white; padding: 32px 0 15px; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1.3fr .8fr 1fr 1fr;
+      gap: 22px;
+      padding-bottom: 25px;
+    }
+    .footer-col { border-right: 1px solid #19344d; padding-right: 14px; }
+    .footer-col:last-child { border: 0; }
+    .footer-col h3 { font-size: 12px; margin-bottom: 9px; }
+    .footer-col p, .footer-col a { display: block; font-size: 11px; margin: 5px 0; color: #d8e1ed; }
+    .footer-col a:hover { color: var(--blue); }
+    .footer-logo .brand { transform: scale(.8); transform-origin: left top; min-width: 0; }
+    .footer-bottom {
+      border-top: 1px solid #24415e;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 10px;
+      color: #d8e1ed;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .header-inner { flex-wrap: wrap; justify-content: center; text-align: center; gap: 12px; }
+      .brand { align-items: center; min-width: 0; }
+      .brand-car, .brand-limited { margin-left: 0; }
+      .header-details { flex-wrap: wrap; gap: 12px 20px; }
+      .tagline { display: none; }
+      .nav-inner { justify-content: flex-start; overflow-x: auto; }
+      .nav-inner a { padding: 13px 14px; }
+      .hero { min-height: 390px; background-position: 58% center; }
+      .hero-content { max-width: 570px; }
+      .service-grid { gap: 13px; }
+      .service-image { height: 140px; }
+      .service-content { padding: 30px 12px 15px; }
+      .service-content h3 { font-size: 15px; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 600px) {
+      .header-inner { min-height: 0; padding: 18px 0; }
+      .brand-name { font-size: 34px; }
+      .header-details { font-size: 11px; }
+      .detail strong { font-size: 12px; }
+      .nav-inner a { font-size: 12px; padding: 12px; }
+      .hero { min-height: 440px; background-position: 63% center; }
+      .hero-content { padding-top: 38px; padding-bottom: 38px; }
+      .eyebrow { font-size: 10px; letter-spacing: .8px; }
+      h1 { font-size: 37px; }
+      .hero p { font-size: 14px; }
+      .btn { font-size: 12px; padding: 11px 15px; }
+      .section { padding: 32px 0; }
+      .section-heading h2 { font-size: 25px; }
+      .service-grid { grid-template-columns: 1fr; gap: 18px; }
+      .service-image { height: 200px; }
+      .service-content { padding: 32px 18px 18px; }
+      .service-content h3 { font-size: 17px; }
+      .benefits { grid-template-columns: repeat(2, 1fr); }
+      .benefit { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.15); padding: 12px 5px; }
+      .benefit:last-child { grid-column: 1 / -1; }
+      .coverage-layout { grid-template-columns: 1fr; }
+      .coverage-art { min-height: 95px; }
+      .coverage-art .big-pin { font-size: 32px; }
+      .cta-inner { flex-direction: column; align-items: flex-start; }
+      .cta-copy h2 { font-size: 18px; }
+      .cta-actions { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 20px 14px; }
+      .footer-col { padding-right: 8px; }
+      .footer-logo { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; }
+    }
+  </style>
 </head>
 
 <body>
-<div class="top">
-  <div class="wrap">
-    <span>Windsor · Maidenhead · Surrounding Areas</span>
-    <a href="tel:+447733647894">Call us: 07733 647894</a>
-  </div>
-</div>
+  <header class="top-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="A to Z Auto Mechanics home">
+        <span class="brand-car">━━━━━ AUTO CARE ━━━━━</span>
+        <span class="brand-name">A <span>TO</span> Z</span>
+        <span class="brand-sub">AUTO MECHANICS</span>
+        <span class="brand-limited">LIMITED</span>
+      </a>
 
-<header>
-  <nav class="wrap">
-    <a class="logo" href="index.html">
-      A <span>TO</span> Z AUTO MECHANICS
-      <small>FROM A TO Z, WE'VE GOT YOUR CAR COVERED</small>
-    </a>
-    <div class="links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <div class="header-details">
+        <a class="detail" href="tel:07733647894">
+          <span class="detail-icon">☎</span>
+          <span><strong>07733 647894</strong>Call / WhatsApp</span>
+        </a>
+        <a class="detail" href="https://wa.me/447733647894" target="_blank" rel="noopener">
+          <span class="detail-icon" style="color:#20d66b">◉</span>
+          <span><strong>WhatsApp</strong>Message us today</span>
+        </a>
+        <div class="detail">
+          <span class="detail-icon">📍</span>
+          <span><strong>Windsor & Maidenhead (RBWM)</strong>And surrounding areas</span>
+        </div>
+      </div>
+
+      <div class="tagline">From A to Z,<small>We've Got Your Car Covered</small></div>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="active" href="index.html">Home</a>
+      <a href="services.html">Our Services</a>
+      <a href="about.html">About Us</a>
       <a href="sales.html">Car Sales</a>
       <a href="rentals.html">Car Rentals</a>
-      <a href="about.html">About</a>
+      <a href="#gallery">Gallery</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
-</header>
 
-<main>
-<section class="hero">
-  <div class="wrap">
-    <span class="eyebrow">YOUR LOCAL AUTOMOTIVE CONTACT</span>
-    <h1>From A to Z,<br><span>We've Got Your Car Covered.</span></h1>
-    <p>From diagnostics and servicing to vehicle recovery, car sales and rentals — contact us for automotive enquiries around Windsor and Maidenhead.</p>
-    <div class="actions">
-      <a class="btn" href="#contact">Request an Enquiry</a>
-      <a class="btn btn-light" href="services.html">Explore Services</a>
-      <a class="btn" href="https://wa.me/447733647894?text=Hello%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
-    </div>
-    <p class="note">Availability, prices and appointments are confirmed directly. An enquiry is not a confirmed booking.</p>
-  </div>
-</section>
-
-<div class="quick">
-  <div class="wrap quick-grid">
-    <div><strong>Mobile Mechanics</strong><span>Assistance by arrangement</span></div>
-    <div><strong>Diagnostics & Repairs</strong><span>Vehicle fault enquiries</span></div>
-    <div><strong>Recovery</strong><span>Availability confirmed first</span></div>
-    <div><strong>Sales & Rentals</strong><span>Ask about your options</span></div>
-  </div>
-</div>
-
-<section class="content" id="services">
-  <div class="wrap">
-    <span class="eyebrow">HOW WE CAN HELP</span>
-    <h2>Vehicle services, all in one place.</h2>
-    <p class="intro">Tell us what you need. We'll discuss your request and confirm availability and costs before proceeding.</p>
-
-    <div class="cards">
-      <article class="card">
-        <div class="symbol">⚙️</div>
-        <h3>Mobile Mechanics</h3>
-        <p>Vehicle assistance at a location agreed in advance.</p>
-        <a href="services.html">Explore services →</a>
-      </article>
-      <article class="card">
-        <div class="symbol">🔍</div>
-        <h3>Diagnostics</h3>
-        <p>Investigating warning lights and vehicle faults.</p>
-        <a href="services.html">Explore services →</a>
-      </article>
-      <article class="card">
-        <div class="symbol">🔧</div>
-        <h3>Repairs & Servicing</h3>
-        <p>Enquire about maintenance and repair options.</p>
-        <a href="services.html">Explore services →</a>
-      </article>
-      <article class="card">
-        <div class="symbol">✓</div>
-        <h3>MOT Arrangements</h3>
-        <p>Ask about arranging a test with an authorised MOT centre.</p>
-        <a href="services.html">Explore services →</a>
-      </article>
-      <article class="card">
-        <div class="symbol">🚚</div>
-        <h3>Vehicle Recovery</h3>
-        <p>Request assistance and confirm availability and costs.</p>
-        <a href="services.html">Explore services →</a>
-      </article>
-      <article class="card">
-        <div class="symbol">🚘</div>
-        <h3>Vehicle Enquiries</h3>
-        <p>Ask our team about car sales and rental options.</p>
-        <a href="sales.html">Explore options →</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="sales">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">CAR SALES</span>
-      <h2>Looking for your next car?</h2>
-      <p>Tell us what type of vehicle you're looking for and ask about availability, prices and viewing arrangements.</p>
-    </div>
-    <a class="btn" href="sales.html">Explore Car Sales →</a>
-  </div>
-</section>
-
-<section class="content pale" id="rentals">
-  <div class="wrap split">
-    <div>
-      <span class="eyebrow">CAR RENTALS</span>
-      <h2>Find out about rental options.</h2>
-      <p class="muted">Tell us your preferred dates and vehicle type. Availability, driver eligibility, insurance, costs and rental terms must be confirmed before approval.</p>
-      <a class="btn" href="rentals.html">Explore Car Rentals →</a>
-    </div>
-    <div class="panel">
-      <h3>Rental enquiries</h3>
-      <ul>
-        <li>Ask about vehicle availability</li>
-        <li>Discuss your intended dates</li>
-        <li>Confirm driver and insurance requirements</li>
-        <li>Review terms before booking</li>
-      </ul>
-      <p class="muted">Please do not send identity documents or payment card details in an initial message.</p>
-    </div>
-  </div>
-</section>
-
-<section class="content" id="about">
-  <div class="wrap split">
-    <div>
-      <span class="eyebrow">ABOUT A TO Z</span>
-      <h2>A clear point of contact for your vehicle needs.</h2>
-    </div>
-    <div>
-      <p class="muted">Our aim is to make automotive enquiries straightforward, from vehicle assistance to car sales and rentals around Windsor, Maidenhead and surrounding areas.</p>
-      <p class="muted">We aim to explain next steps clearly and confirm availability and costs before work, sales or rentals proceed.</p>
-      <a class="btn" href="about.html">More About Us →</a>
-    </div>
-  </div>
-</section>
-
-<section class="content pale" id="contact">
-  <div class="wrap split">
-    <div>
-      <span class="eyebrow">GET IN TOUCH</span>
-      <h2>How can we help you today?</h2>
-      <p class="muted">Complete the form to prepare a WhatsApp message. You'll be able to review it before sending.</p>
-      <p><a class="phone" href="tel:+447733647894">07733 647894</a></p>
-      <p><a class="btn" href="contact.html">Visit Contact Us →</a></p>
-      <p class="muted">Windsor · Maidenhead · Surrounding Areas</p>
-    </div>
-
-    <form id="enquiry">
-      <label>Your name
-        <input name="name" required maxlength="100" autocomplete="name">
-      </label>
-      <label>Your phone number
-        <input name="phone" required type="tel" maxlength="30" autocomplete="tel">
-      </label>
-      <label>What is your enquiry about?
-        <select name="service" required>
-          <option value="">Please choose</option>
-          <option>Mobile mechanics / repairs</option>
-          <option>Diagnostics / servicing</option>
-          <option>MOT arrangements</option>
-          <option>Vehicle recovery</option>
-          <option>Car sales</option>
-          <option>Car rental</option>
-          <option>Other enquiry</option>
-        </select>
-      </label>
-      <label>Your message
-        <textarea name="details" required maxlength="1200" placeholder="Briefly tell us what you need."></textarea>
-      </label>
-      <label class="consent">
-        <input type="checkbox" required>
-        I understand WhatsApp will open so I can review and send my enquiry.
-      </label>
-      <button class="btn" type="submit">Continue to WhatsApp</button>
-      <p class="status" id="status" role="status"></p>
-    </form>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <strong>A TO Z AUTO MECHANICS</strong>
-        <p>From A to Z, We've Got Your Car Covered.</p>
-        <small>Windsor · Maidenhead · Surrounding Areas</small>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Mobile Mechanics <span>|</span> Car Sales <span>|</span> Car Rentals</div>
+          <h1>A Complete <span>Automotive Solution</span></h1>
+          <p>
+            Whether you need a repair, a reliable used car, or a rental vehicle,
+            A to Z Auto Mechanics is here to help. We provide professional,
+            reliable and convenient automotive services across Windsor,
+            Maidenhead and surrounding areas.
+          </p>
+          <div class="buttons">
+            <a class="btn btn-blue" href="tel:07733647894">☎ Call Us Now: 07733 647894</a>
+            <a class="btn btn-green" href="https://wa.me/447733647894" target="_blank" rel="noopener">◉ WhatsApp Us</a>
+          </div>
+        </div>
       </div>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="sales.html">Car Sales</a>
-        <a href="rentals.html">Car Rentals</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="tel:+447733647894">Call 07733 647894</a>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Services</h2>
+          <div class="underline"></div>
+          <p class="section-intro">From vehicle repairs to buying or hiring a car, we're here to help.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c5f1c8?auto=format&fit=crop&w=900&q=80" alt="Mechanic working on a car engine" loading="lazy">
+              <span class="service-icon">🔧</span>
+            </div>
+            <div class="service-content">
+              <h3>Mobile Mechanics</h3>
+              <p>We come to you — at home, work or roadside. Diagnostics, servicing, repairs and more.</p>
+              <ul>
+                <li>Diagnostics and fault finding</li>
+                <li>Servicing and maintenance</li>
+                <li>Brakes, batteries and tyres</li>
+                <li>Engine and mechanical repairs</li>
+              </ul>
+              <a class="btn btn-dark" href="services.html">Book a Service →</a>
+            </div>
+          </article>
+
+          <article class="service-card" id="gallery">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80" alt="Car ready for sale" loading="lazy">
+              <span class="service-icon">🚘</span>
+            </div>
+            <div class="service-content">
+              <h3>Car Sales</h3>
+              <p>Looking for your next car? Explore our used-car options and get in touch with our team.</p>
+              <ul>
+                <li>Used car enquiries</li>
+                <li>Part exchange enquiries welcome</li>
+                <li>Sell us your car enquiries</li>
+                <li>Friendly, transparent service</li>
+              </ul>
+              <a class="btn btn-dark" href="sales.html">View Our Cars →</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80" alt="Modern cars available to hire" loading="lazy">
+              <span class="service-icon">🔑</span>
+            </div>
+            <div class="service-content">
+              <h3>Car Rentals</h3>
+              <p>Flexible vehicle hire options to suit your needs, whether short-term or longer-term.</p>
+              <ul>
+                <li>Short and long-term hire enquiries</li>
+                <li>Vehicle availability enquiries</li>
+                <li>Competitive rates</li>
+                <li>Subject to rental agreement</li>
+              </ul>
+              <a class="btn btn-dark" href="rentals.html">View Rental Options →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="container">
+        <h2>Why Choose Us?</h2>
+        <div class="underline"></div>
+        <div class="benefits">
+          <div class="benefit"><span class="icon">⚙</span><p>Experienced<br>& Skilled Team</p></div>
+          <div class="benefit"><span class="icon">🚐</span><p>Convenient<br>Mobile Service</p></div>
+          <div class="benefit"><span class="icon">♢</span><p>Quality<br>Vehicles</p></div>
+          <div class="benefit"><span class="icon">£</span><p>Competitive<br>Prices</p></div>
+          <div class="benefit"><span class="icon">♙</span><p>Customer<br>Satisfaction</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container coverage-layout">
+        <div>
+          <div class="coverage-title">
+            <span class="coverage-pin">📍</span>
+            <h2>Our Coverage Area</h2>
+          </div>
+          <p class="coverage-copy">
+            We are based in Windsor and Maidenhead (RBWM) and cover the surrounding areas.
+            Contact us to check availability for your location.
+          </p>
+          <div class="towns">
+            <span>Windsor & Maidenhead</span>
+            <span>Ascot & Sunningdale</span>
+            <span>Slough & Langley</span>
+            <span>Eton & Datchet</span>
+            <span>Taplow & Burnham</span>
+            <span>Bracknell and nearby areas</span>
+          </div>
+        </div>
+        <div class="coverage-art">
+          <div><span class="big-pin">📍</span><strong>Serving Windsor, Maidenhead<br>and surrounding areas</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <span class="cta-car">🚘</span>
+          <div>
+            <h2>Need Help With Your Vehicle?</h2>
+            <p>Call or WhatsApp us today for friendly service and enquiries.</p>
+          </div>
+        </div>
+        <div class="cta-actions">
+          <a class="btn" href="tel:07733647894">☎ 07733 647894</a>
+          <a class="btn btn-green" style="color:white;background:#13a950" href="https://wa.me/447733647894" target="_blank" rel="noopener">◉ WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-logo">
+          <a class="brand" href="index.html">
+            <span class="brand-car">━━━━━ AUTO CARE ━━━━━</span>
+            <span class="brand-name">A <span>TO</span> Z</span>
+            <span class="brand-sub">AUTO MECHANICS</span>
+            <span class="brand-limited">LIMITED</span>
+          </a>
+        </div>
+
+        <div class="footer-col">
+          <h3>A TO Z AUTO MECHANICS</h3>
+          <p>From A to Z, We've Got Your Car Covered.</p>
+          <p>Professional automotive enquiries across Windsor, Maidenhead and nearby areas.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="services.html">Our Services</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Our Services</h3>
+          <a href="services.html">Mobile Mechanics</a>
+          <a href="sales.html">Car Sales</a>
+          <a href="rentals.html">Car Rentals</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <a href="tel:07733647894">☎ 07733 647894</a>
+          <p>📍 Windsor & Maidenhead (RBWM) and surrounding areas</p>
+          <a href="https://wa.me/447733647894" target="_blank" rel="noopener">◉ WhatsApp Us</a>
+          <a href="mailto:hamzakianiautos@gmail.com">✉ Email Us</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> A TO Z AUTO MECHANICS. All rights reserved.</span>
+        <span>From A to Z, We've Got Your Car Covered.</span>
       </div>
     </div>
-    <div class="legal">
-      Enquiries do not confirm a booking. Service availability, prices, vehicle details and rental terms must be confirmed directly.
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-document.getElementById("enquiry").addEventListener("submit", function(event) {
-  event.preventDefault();
-  if (!this.reportValidity()) return;
-
-  const data = new FormData(this);
-  const message = [
-    "Hello A TO Z Auto Mechanics, I'd like to make a website enquiry.",
-    "Name: " + data.get("name"),
-    "Phone: " + data.get("phone"),
-    "Enquiry: " + data.get("service"),
-    "Message: " + data.get("details")
-  ].join("\n");
-
-  document.getElementById("status").textContent =
-    "Opening WhatsApp so you can review and send your message.";
-
-  window.location.href =
-    "https://wa.me/447733647894?text=" + encodeURIComponent(message);
-});
-</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
