@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071a33">
+<meta name="description" content="A TO Z Auto Mechanics — automotive enquiries, repairs, diagnostics, servicing, car sales and rentals in Windsor and Maidenhead.">
+<title>A TO Z Auto Mechanics | From A to Z, We've Got Your Car Covered</title>
+<style>
+:root{--navy:#071a33;--blue:#1769ed;--pale:#f2f6fc;--ink:#172941;--muted:#62738a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.65}
+.wrap{width:min(1080px,90%);margin:auto}
+.top{background:#041226;color:#dce9fa;padding:9px 0;font-size:13px}
+.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+a{color:inherit}
+header{position:sticky;top:0;background:white;box-shadow:0 3px 18px #071a3312;z-index:5}
+nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{text-decoration:none;font-size:20px;font-weight:900;line-height:1.2;color:var(--navy)}
+.logo span{color:var(--blue)}
+.logo small{display:block;font-size:9px;letter-spacing:1px;color:#63748b;margin-top:5px}
+nav .navlinks{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;font-size:13px;font-weight:700}
+.navlinks a:hover{color:var(--blue)}
+.btn{display:inline-block;border:0;border-radius:8px;background:var(--blue);color:white!important;padding:13px 19px;text-decoration:none;font-weight:750;cursor:pointer}
+.btn:hover{background:#0954c7}
+.hero{background:radial-gradient(ellipse at 85% 20%,#194c85,transparent 45%),linear-gradient(120deg,#06162c,#0b2b50);color:white;padding:90px 0}
+.eyebrow{color:#3985ff;font-size:11px;font-weight:850;letter-spacing:2px;text-transform:uppercase}
+.hero .eyebrow{color:#a9ceff}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.1;letter-spacing:-1.8px;margin:18px 0}
+h1 em{font-style:normal;color:#80b5ff}
+.hero p{max-width:640px;color:#d6e4f5;font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn.outline{background:transparent;border:1px solid #b2cefa}
+.note{color:#a9c1de;font-size:12px;margin-top:20px}
+.quick{background:white;border-bottom:1px solid #e4eaf3}
+.quick .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding:22px 0}
+.quick strong,.quick span{display:block}
+.quick strong{font-size:14px}
+.quick span{font-size:12px;color:var(--muted)}
+section.content{padding:72px 0}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.2;letter-spacing:-.8px;margin:12px 0}
+.intro{color:var(--muted);max-width:700px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.card{padding:24px;border:1px solid #e2eaf4;border-radius:13px;background:white}
+.symbol{font-size:27px;background:#eaf2ff;border-radius:10px;width:48px;height:48px;display:grid;place-items:center;color:var(--blue)}
+.card h3{margin:15px 0 5px}
+.card p{font-size:14px;color:var(--muted)}
+.card a{font-weight:750;color:var(--blue);font-size:13px;text-decoration:none}
+.band{background:var(--navy);color:white;padding:48px 0}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.band p{color:#c6d6ea;max-width:650px}
+.pale{background:var(--pale)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.panel{padding:25px;background:white;border:1px solid #e1e9f4;border-radius:12px}
+.panel li{padding:5px 0}
+.muted{color:var(--muted)}
+.phone{font-size:27px;font-weight:850;color:var(--blue);text-decoration:none}
+form{padding:24px;background:white;border:1px solid #e1e9f4;border-radius:13px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:13px}
+input,select,textarea{width:100%;padding:12px;margin-top:5px;border:1px solid #cbd7e6;border-radius:7px;font:inherit;background:white}
+textarea{min-height:105px}
+.consent{display:flex;align-items:flex-start;gap:9px;font-weight:400;color:var(--muted)}
+.consent input{width:auto;margin-top:5px}
+footer{background:#06162b;color:#dce7f5;padding:38px 0 20px}
+.foot{display:grid;grid-template-columns:2fr 1fr;gap:25px}
+footer a{display:block;margin:5px 0;text-decoration:none;font-size:13px}
+footer p,footer small{color:#a8bbd3}
+.legal{border-top:1px solid #243b56;margin-top:25px;padding-top:15px;font-size:11px;color:#9cb0c9}
+@media(max-width:760px){nav{align-items:flex-start;flex-direction:column;padding:16px 0}.navlinks{gap:12px!important}.quick .wrap{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr;gap:22px}.band .wrap{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.hero{padding:65px 0}.hero p{font-size:16px}.actions .btn{width:100%;text-align:center}.cards{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.quick strong{font-size:12px}.quick span{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>Windsor · Maidenhead · Surrounding areas</span><a href="tel:+447733647894">Call us: 07733 647894</a></div></div>
+<header><nav class="wrap"><a class="logo" href="#home">A <span>TO</span> Z AUTO MECHANICS<small>FROM A TO Z, WE'VE GOT YOUR CAR COVERED.</small></a><div class="navlinks"><a href="#services">Services</a><a href="#sales">Car Sales</a><a href="#rentals">Car Rentals</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav></header>
+<main id="home">
+<section class="hero"><div class="wrap"><span class="eyebrow">YOUR LOCAL AUTOMOTIVE CONTACT</span><h1>From A to Z,<br><em>We've Got Your Car Covered.</em></h1><p>Automotive enquiries made simple — from diagnostics and servicing to vehicle recovery, car sales and rentals around Windsor and Maidenhead.</p><div class="actions"><a class="btn" href="#contact">Request an Enquiry ↗</a><a class="btn outline" href="#services">Explore Services</a><a class="btn" style="background:#fff;color:#071a33!important" href="https://wa.me/447733647894?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp Us</a></div><p class="note">Availability, prices and appointments are confirmed directly. Sending an enquiry does not confirm a booking.</p></div></section>
+<div class="quick"><div class="wrap"><div><strong>Mobile Mechanics</strong><span>Assistance by arrangement</span></div><div><strong>Diagnostics & Repairs</strong><span>Assessment-led service</span></div><div><strong>Recovery Enquiries</strong><span>Availability confirmed first</span></div><div><strong>Sales & Rentals</strong><span>Ask about your options</span></div></div></div>
+<section class="content" id="services"><div class="wrap"><span class="eyebrow">HOW WE CAN HELP</span><h2>Automotive services, all in one place.</h2><p class="intro">Tell us what you need and we'll review your request. Work and availability are subject to confirmation.</p><div class="cards">
+<article class="card"><div class="symbol">⚙</div><h3>Mobile Mechanics</h3><p>Vehicle assistance at a location agreed in advance.</p><a href="#contact">Make an enquiry →</a></article>
+<article class="card"><div class="symbol">⌁</div><h3>Diagnostics</h3><p>Fault-code checks and investigation of vehicle problems.</p><a href="#contact">Make an enquiry →</a></article>
+<article class="card"><div class="symbol">🔧</div><h3>Repairs & Servicing</h3><p>Maintenance and repairs subject to assessment.</p><a href="#contact">Make an enquiry →</a></article>
+<article class="card"><div class="symbol">✓</div><h3>MOT Arrangements</h3><p>Enquiries about arranging an MOT with an authorised test centre.</p><a href="#contact">Make an enquiry →</a></article>
+<article class="card"><div class="symbol">🚚</div><h3>Vehicle Recovery</h3><p>Request assistance; dispatch depends on availability.</p><a href="#contact">Request help →</a></article>
+<article class="card"><div class="symbol">🚘</div><h3>Vehicle Support</h3><p>Ask us about vehicle sales and rental options.</p><a href="#sales">Explore options →</a></article>
+</div></div></section>
+<section class="band" id="sales"><div class="wrap"><div><span class="eyebrow">CAR SALES</span><h2>Looking for your next vehicle?</h2><p>Enquire about vehicles for sale or discuss your requirements. Any offer or reservation must be confirmed directly.</p></div><a class="btn" href="https://wa.me/447733647894?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20car%20sales." target="_blank" rel="noopener noreferrer">Enquire about Car Sales ↗</a></div></section>
+<section class="content pale" id="rentals"><div class="wrap split"><div><span class="eyebrow">CAR RENTALS</span><h2>Rental enquiries, made straightforward.</h2><p class="muted">Tell us your intended dates and requirements. Vehicle availability, driver eligibility, insurance, terms and any deposit must be confirmed before a rental is approved.</p><a class="btn" href="https://wa.me/447733647894?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20vehicle%20rental." target="_blank" rel="noopener noreferrer">Ask about Rentals ↗</a></div><div class="panel"><h3>Rental requests</h3><ul><li>Check dates and availability</li><li>Confirm driver eligibility</li><li>Review terms before approval</li><li>Arrange collection after confirmation</li></ul><p class="muted">Please don't send identity documents or payment card details in an initial message.</p></div></div></section>
+<section class="content" id="about"><div class="wrap split"><div><span class="eyebrow">ABOUT A TO Z</span><h2>A clear point of contact for your vehicle needs.</h2></div><div><p class="muted">A TO Z Auto Mechanics is being set up to handle automotive enquiries for Windsor, Maidenhead and nearby areas.</p><p class="muted">Our aim is to make the process clear: send an enquiry, discuss your requirements and receive confirmation before any work, sale or rental proceeds.</p><p class="muted">Business registration and operational details are still being finalised. Please confirm service availability directly.</p></div></div></section>
+<section class="content pale" id="contact"><div class="wrap split"><div><span class="eyebrow">GET IN TOUCH</span><h2>What can we help you with?</h2><p class="muted">Complete the form to prepare a WhatsApp message. You can review it before choosing to send it.</p><a class="phone" href="tel:+447733647894">07733 647894</a><p><a class="btn" href="https://wa.me/447733647894" target="_blank" rel="noopener noreferrer">Open WhatsApp ↗</a></p></div><form id="enquiry"><label>Your name<input name="name" required maxlength="100" autocomplete="name"></label><label>Phone number<input name="phone" required type="tel" maxlength="30" autocomplete="tel"></label><label>Enquiry type<select name="service" required><option value="">Choose an option</option><option>Mobile mechanics / repairs</option><option>Diagnostics / servicing</option><option>MOT arrangement</option><option>Vehicle recovery</option><option>Car sales</option><option>Car rental</option><option>Other enquiry</option></select></label><label>Vehicle and message<textarea name="details" required maxlength="1200" placeholder="Briefly describe your vehicle and what you need."></textarea></label><label class="consent"><input type="checkbox" required> I understand this is an enquiry, not a confirmed booking, and WhatsApp will open so I can review and send my message.</label><button class="btn" type="submit">Prepare WhatsApp Enquiry ↗</button><p id="status" class="muted" role="status"></p></form></div></section>
+</main>
+<footer><div class="wrap"><div class="foot"><div><strong>A TO Z AUTO MECHANICS</strong><p>From A to Z, We've Got Your Car Covered.</p><small>Windsor · Maidenhead · Surrounding areas</small></div><div><a href="#services">Services</a><a href="#sales">Car Sales</a><a href="#rentals">Car Rentals</a><a href="#contact">Contact</a></div></div><div class="legal">Website preview. Online payments, customer accounts, document uploads and live booking management are not enabled. Review legal business details and privacy requirements before launch.</div></div></footer>
+<script>
+document.getElementById('enquiry').addEventListener('submit',function(e){e.preventDefault();if(!this.reportValidity())return;const d=new FormData(this);const msg=["Hello, I'd like to make an enquiry with A TO Z Auto Mechanics.","Name: "+d.get("name"),"Phone: "+d.get("phone"),"Enquiry: "+d.get("service"),"Vehicle/details: "+d.get("details")].join("\n");document.getElementById('status').textContent="Opening WhatsApp so you can review and send your message.";window.open("https://wa.me/447733647894?text="+encodeURIComponent(msg),"_blank","noopener,noreferrer")});
+</script>
+</body>
+</html>
